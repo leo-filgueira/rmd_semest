@@ -34,6 +34,17 @@ Segundo seu próprio criador:
 
 - Uso de algumas estruturas do $\LaTeX{}$.
 
+## Pacotes necessários
+
+Para criar um documento dinâmico no R Markdown são necessários os seguintes pacotes:
+
+- `rmarkdown`
+- `knitr`
+- `pandoc`
+- `shiny`
+
+Sendo que o último pacote, `shiny`, será necessário apenas ao criar relatórios interativos.
+
 ## Criando um arquivo .Rmd
 
 - No RStudio, basta clicar em *File*, *New File*, *R Markdown*:
@@ -43,3 +54,15 @@ Segundo seu próprio criador:
 - Uma janela se abrirá, onde poderemos inserir título, autor e formato de *output*:
 
     ![](img/New_RMD.png)
+    
+- Ao apertar em "OK" o arquivo .Rmd será aberto.
+
+- Para compilar o arquivo, aperte no botão **Knit**, ou pressione *Ctrl + Shift + K*. Veja o resultado.
+
+- Vejamos a estrutura básica de um arquivo .Rmd:
+
+    ![](img/Estrutura_RMD.png)
+
+### Formatação do texto
+
+A seguir serão apresentadas algumas maneiras de aplicar formatações ao texto. Para mais detalhes, veja o [guia de referência do rmarkdown](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf) e o [rmarkdown cheatsheet](https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf).
