@@ -38,8 +38,8 @@ Segundo seu próprio criador:
 
 - No RStudio, basta clicar em *File*, *New File*, *R Markdown*:
 
-    ![](New.png)
+    ![](img/New.png)
 
 - Uma janela se abrirá, onde poderemos inserir título, autor e formato de *output*:
 
-    ![](New_RMD.png)
+    ![](img/New_RMD.png)
