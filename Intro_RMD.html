@@ -17,6 +17,44 @@
 
 
 
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
 
 
 
@@ -65,10 +103,9 @@
 <h2>Pacotes necessários</h2>
 <p>Para criar um documento dinâmico no R Markdown são necessários os seguintes pacotes:</p>
 <ul>
-<li><code>rmarkdown</code></li>
-<li><code>knitr</code></li>
-<li><code>pandoc</code></li>
-<li><code>shiny</code></li>
+<li><a href="https://rmarkdown.rstudio.com/"><code>rmarkdown</code></a></li>
+<li><a href="https://yihui.name/knitr/"><code>knitr</code></a></li>
+<li><a href="https://shiny.rstudio.com/"><code>shiny</code></a></li>
 </ul>
 <p>Sendo que o último pacote, <code>shiny</code>, será necessário apenas ao criar relatórios interativos.</p>
 </div>
@@ -96,6 +133,147 @@
 <div id="formatacao-do-texto" class="section level3">
 <h3>Formatação do texto</h3>
 <p>A seguir serão apresentadas algumas maneiras de aplicar formatações ao texto. Para mais detalhes, veja o <a href="https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf">guia de referência do rmarkdown</a> e o <a href="https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf">rmarkdown cheatsheet</a>.</p>
+<!-- https://github.com/mustafaascha/rmarkdownTutorial -->
+<div id="titulo-subtitulos" class="section level4">
+<h4>Título, subtítulos…</h4>
+<p>Ao adicionar # no início de uma linha, o texto nessa linha será transformado em título, se colocarmos ##, teremos um subtítulo, e por aí vai…</p>
+<pre><code># Título de nível 1
+
+## Título de nível 2
+
+### Título de nível 3
+
+#### Título de nível 4</code></pre>
+</div>
+<div id="italico" class="section level4">
+<h4>Itálico</h4>
+<p>Se quisermos que um trecho do texto seja formatado em <em>itálico</em>, usamos * ou _ entre o trecho:</p>
+<pre><code>*Este texto ficará em itálico*, _assim como este aqui._</code></pre>
+</div>
+<div id="negrito" class="section level4">
+<h4>Negrito</h4>
+<p>Para colocar um texto em negrito, podemos envolver esse texto com ** ou __:</p>
+<pre><code>**Este texto ficará em negrito**, __assim como este aqui.__</code></pre>
+</div>
+<div id="paragrafo" class="section level4">
+<h4>Parágrafo</h4>
+<p>Basta pular uma linha e teremos dois parágrafos.</p>
+<pre><code>Este é o texto do primeiro parágrafo.
+
+Este é o texto do segundo parágrafo. Note a linha em branco entre eles.</code></pre>
+</div>
+<div id="listas" class="section level4">
+<h4>Listas</h4>
+<div id="nao-ordenadas" class="section level5">
+<h5>Não ordenadas</h5>
+<p>Para fazer listas de tópicos, basta pular uma linha do resto do texto, utilizar -, *, ou + e escrever o texto, após um espaço. Sub listas devem ser escritas quatro espaços após o início do nível anterior.</p>
+<pre><code>Bloco de texto que vem antes da lista. 
+
+- Primeiro item da lista.
+    + Sub lista do primeiro item
+    + Outro elemento da sub lista
+- Segundo item da lista.
+    + Sub lista do segundo item.
+        * Lista da sub lista do segundo item
+- Terceiro item da lista.</code></pre>
+</div>
+<div id="ordenadas" class="section level5">
+<h5>Ordenadas</h5>
+<p>Para que a lista seja ordenada, basta utilizar um número com um ponto a seguir:</p>
+<pre><code>1. Item 1
+    + Item a.
+    + Item b.
+    + Item c.
+2. Item 2
+3. Item 3</code></pre>
+<p>O primeiro número inserido será usado na lista. Os outros seguirão a sequência, não importanto o número inserido. A lista a seguir produzirá o mesmo resultado que a lista anterior:</p>
+<pre><code>1. Item 1
+    + Item a.
+    + Item b.
+    + Item c.
+10. Item 2
+5. Item 3</code></pre>
+<p>Também é possível criar as listas ordenadas com #.</p>
+<pre><code>#. Item 1
+#. Item 2
+#. Item 3</code></pre>
+</div>
+</div>
+<div id="links" class="section level4">
+<h4>Links</h4>
+<p>O link pode ser simplesmente colado no texto, ou então pode ser inserido da seguinte maneira:</p>
+<pre><code>[Frase que aparecerá no texto como link](link)</code></pre>
+</div>
+<div id="imagens" class="section level4">
+<h4>Imagens</h4>
+<p>Uma das maneiras de inserir imagens no R Markdown é bem parecida com a maneira de inserir link:</p>
+<pre><code>![Legenda opcional](caminho_para_imagem)</code></pre>
+<p>O caminho para a imagem deve ser colocado sem aspas. Caso a imagem esteja na mesma pasta do arquivo .Rmd, então será necessário apenas escrever o nome da imagem.</p>
+</div>
+<div id="citacoes" class="section level4">
+<h4>Citações</h4>
+<p>Para fazer alguma citação basta utilizar &gt; no início da linha (o texto será quebrado automaticamente):</p>
+<pre><code>&gt; Sabe sim! Sabe sim! Nós estamos falando aqui de um plano, que chama-se Nova ordem mundial: União de toda a América do Sul, conexão de toda a América do Sul, fazendo apenas, tirando todas as fronteiras, fazendo uma única nação, pátria grande. Poucos ouviram falar disso e vai ser pouco divulgado, isso. Eles sabem do que nós estamos falando. Quero deixar bem claro que no nosso governo o comunismo não vai ter vez. Deixar muito claro isso!
+&gt;
+&gt;  r tufte::quote_footer('--- Daciolo, cabo')</code></pre>
+<p>Note que para inserir o autor da frase estamos usando uma função do R. Para funcionar é necessário ter o pacote <code>tufte</code> instalado.</p>
+</div>
+<div id="expressoes-matematicas" class="section level4">
+<h4>Expressões matemáticas</h4>
+<div id="na-linha" class="section level5">
+<h5>Na linha</h5>
+<p>Qualquer texto que for inserido entre $ será tratado como equação que será inserida na frase onde for escrita.</p>
+<pre><code>Sabemos que $2 + 2 = 4$.</code></pre>
+<p>Também é possível escrever equações em <span class="math inline">\(\LaTeX{}\)</span>:</p>
+<pre><code>Sabemos que $\sqrt{4}^2 = 4$.</code></pre>
+</div>
+<div id="em-um-bloco" class="section level5">
+<h5>Em um bloco</h5>
+<p>Para que a expressão matemática seja inserida em um bloco separado do texto, utilizamos $$ entre a expressão.</p>
+<pre><code>Se $X$ tem distribuição normal, então sua função de densidade é dada por:
+
+$$ f_X(x) = \frac{1}{\sqrt{2 \pi \sigma}} \exp{\frac{-(x - \mu)^2}{2\sigma^2}} $$</code></pre>
+</div>
+</div>
+<div id="tabelas" class="section level4">
+<h4>Tabelas</h4>
+<p>Usamos | para separar colunas e - para delimitar o cabeçalho da tabela:</p>
+<pre><code>Primeira coluna  | Segunda coluna
+---------------- | --------------
+Conteúdo         | Conteúdo
+Conteúdo         | Conteúdo</code></pre>
+</div>
+</div>
+<div id="codigo" class="section level3">
+<h3>Código</h3>
+<div id="codigo-na-linha" class="section level4">
+<h4>Código na linha</h4>
+<p>Basicamente quando queremos escrever código iremos utilizar crase (`). Se desejamos inserir um resultado de um código do R na linha, junto da frase faremos da seguinte forma:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">Sabemos que a base do R iris possui <span class="st">`</span><span class="dt">r nrow(iris)</span><span class="st">`</span> observações.</code></pre></div>
+<p>Se desejarmos que uma palavra (ou trecho) tenha a aparência de código mas não seja executado, basta omitir a letra ‘r’.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">Para descobrir o número de linhas de um data.frame utilizamos a função <span class="st">`</span><span class="dt">nrow</span><span class="st">`</span></code></pre></div>
+</div>
+<div id="bloco-de-codigo-chunk" class="section level4">
+<h4>Bloco de código (chunk)</h4>
+<p>Para inserir um bloco de códigos, clique no botão “Insert” e selecione “R”</p>
+<div class="figure">
+<img src="data:image/png;base64,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" />
+
+</div>
+<p>Dessa maneira será inserido, onde o cursor estiver localizado, o seguinte:</p>
+<pre><code> ```{r}
+
+ ```</code></pre>
+<p>Neste espaço podemos escrever códigos do R normalmente, como se estivéssemos em um script.</p>
+</div>
+</div>
+<div id="ver-tambem" class="section level3">
+<h3>Ver também:</h3>
+<ul>
+<li><a href="https://pandoc.org/MANUAL.html">Manual do Pandoc</a></li>
+<li><a href="https://bookdown.org/yihui/rmarkdown/">Guia definitivo do R Markdown</a></li>
+<li><a href="https://rmarkdown.rstudio.com/authoring_basics.html">Markdown Basics</a>, do site do RStudio.</li>
+</ul>
 </div>
 </div>
 </section>

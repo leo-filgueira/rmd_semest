@@ -2,7 +2,7 @@
 title: "Introdução ao R Markdown"
 author: "Leonardo Filgueira e Matheus Camelo"
 date: "17/10/2018"
-output:
+output: 
   prettydoc::html_pretty:
     theme: cayman
     highlight: github
@@ -38,10 +38,9 @@ Segundo seu próprio criador:
 
 Para criar um documento dinâmico no R Markdown são necessários os seguintes pacotes:
 
-- `rmarkdown`
-- `knitr`
-- `pandoc`
-- `shiny`
+- [`rmarkdown`](https://rmarkdown.rstudio.com/)
+- [`knitr`](https://yihui.name/knitr/)
+- [`shiny`](https://shiny.rstudio.com/)
 
 Sendo que o último pacote, `shiny`, será necessário apenas ao criar relatórios interativos.
 
@@ -65,4 +64,202 @@ Sendo que o último pacote, `shiny`, será necessário apenas ao criar relatóri
 
 ### Formatação do texto
 
-A seguir serão apresentadas algumas maneiras de aplicar formatações ao texto. Para mais detalhes, veja o [guia de referência do rmarkdown](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf) e o [rmarkdown cheatsheet](https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf).
+A seguir serão apresentadas algumas maneiras de aplicar formatações ao texto. Para mais detalhes, veja o [guia de referência do rmarkdown](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf) e o [rmarkdown cheatsheet](https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf). 
+
+<!-- https://github.com/mustafaascha/rmarkdownTutorial -->
+
+#### Título, subtítulos...
+
+Ao adicionar \# no início de uma linha, o texto nessa linha será transformado em título, se colocarmos \#\#, teremos um subtítulo, e por aí vai...
+
+```
+# Título de nível 1
+
+## Título de nível 2
+
+### Título de nível 3
+
+#### Título de nível 4
+```
+
+#### Itálico
+
+Se quisermos que um trecho do texto seja formatado em _itálico_, usamos \* ou \_ entre o trecho:
+
+```
+*Este texto ficará em itálico*, _assim como este aqui._
+```
+
+#### Negrito
+
+Para colocar um texto em negrito, podemos envolver esse texto com \*\* ou \_\_:
+
+```
+**Este texto ficará em negrito**, __assim como este aqui.__
+```
+
+#### Parágrafo
+
+Basta pular uma linha e teremos dois parágrafos.
+
+```
+Este é o texto do primeiro parágrafo.
+
+Este é o texto do segundo parágrafo. Note a linha em branco entre eles.
+```
+
+#### Listas
+
+##### Não ordenadas
+
+Para fazer listas de tópicos, basta pular uma linha do resto do texto, utilizar \-, \*, ou \+ e escrever o texto, após um espaço. Sub listas devem ser escritas quatro espaços após o início do nível anterior.
+
+```
+Bloco de texto que vem antes da lista. 
+
+- Primeiro item da lista.
+    + Sub lista do primeiro item
+    + Outro elemento da sub lista
+- Segundo item da lista.
+    + Sub lista do segundo item.
+        * Lista da sub lista do segundo item
+- Terceiro item da lista.
+```
+
+##### Ordenadas
+
+Para que a lista seja ordenada, basta utilizar um número com um ponto a seguir:
+
+```
+1. Item 1
+    + Item a.
+    + Item b.
+    + Item c.
+2. Item 2
+3. Item 3
+```
+
+O primeiro número inserido será usado na lista. Os outros seguirão a sequência, não importanto o número inserido. A lista a seguir produzirá o mesmo resultado que a lista anterior:
+
+```
+1. Item 1
+    + Item a.
+    + Item b.
+    + Item c.
+10. Item 2
+5. Item 3
+```
+
+Também é possível criar as listas ordenadas com \#\.
+
+```
+#. Item 1
+#. Item 2
+#. Item 3
+```
+
+#### Links
+
+O link pode ser simplesmente colado no texto, ou então pode ser inserido da seguinte maneira:
+
+```
+[Frase que aparecerá no texto como link](link)
+```
+
+#### Imagens
+
+Uma das maneiras de inserir imagens no R Markdown é bem parecida com a maneira de inserir link:
+
+```
+![Legenda opcional](caminho_para_imagem)
+```
+
+O caminho para a imagem deve ser colocado sem aspas. Caso a imagem esteja na mesma pasta do arquivo .Rmd, então será necessário apenas escrever o nome da imagem.
+
+#### Citações
+
+Para fazer alguma citação basta utilizar \> no início da linha (o texto será quebrado automaticamente):
+
+```
+> Sabe sim! Sabe sim! Nós estamos falando aqui de um plano, que chama-se Nova ordem mundial: União de toda a América do Sul, conexão de toda a América do Sul, fazendo apenas, tirando todas as fronteiras, fazendo uma única nação, pátria grande. Poucos ouviram falar disso e vai ser pouco divulgado, isso. Eles sabem do que nós estamos falando. Quero deixar bem claro que no nosso governo o comunismo não vai ter vez. Deixar muito claro isso!
+>
+> `r ''` r tufte::quote_footer('--- Daciolo, cabo')
+```
+
+Note que para inserir o autor da frase estamos usando uma função do R. Para funcionar é necessário ter o pacote `tufte` instalado.
+
+#### Expressões matemáticas
+
+##### Na linha
+
+Qualquer texto que for inserido entre \$ será tratado como equação que será inserida na frase onde for escrita.
+
+```
+Sabemos que $2 + 2 = 4$.
+```
+
+Também é possível escrever equações em $\LaTeX{}$:
+
+```
+Sabemos que $\sqrt{4}^2 = 4$.
+```
+
+##### Em um bloco
+
+Para que a expressão matemática seja inserida em um bloco separado do texto, utilizamos \$\$ entre a expressão.
+
+```
+Se $X$ tem distribuição normal, então sua função de densidade é dada por:
+
+$$ f_X(x) = \frac{1}{\sqrt{2 \pi \sigma}} \exp{\frac{-(x - \mu)^2}{2\sigma^2}} $$
+```
+
+#### Tabelas
+
+Usamos \| para separar colunas e \- para delimitar o cabeçalho da tabela:
+
+```
+Primeira coluna  | Segunda coluna
+---------------- | --------------
+Conteúdo         | Conteúdo
+Conteúdo         | Conteúdo
+```
+
+### Código
+
+#### Código na linha
+
+Basicamente quando queremos escrever código iremos utilizar crase (\`). Se desejamos inserir um resultado de um código do R na linha, junto da frase faremos da seguinte forma:
+
+```{r eval = F}
+Sabemos que a base do R iris possui `r nrow(iris)` observações.
+```
+
+Se desejarmos que uma palavra (ou trecho) tenha a aparência de código mas não seja executado, basta omitir a letra 'r'.
+
+```{r eval = F}
+Para descobrir o número de linhas de um data.frame utilizamos a função `nrow`
+```
+
+#### Bloco de código (chunk)
+
+Para inserir um bloco de códigos, clique no botão "Insert" e selecione "R"
+
+![](img/insert_chunk.png)
+
+Dessa maneira será inserido, onde o cursor estiver localizado, o seguinte:
+
+```
+`r ''` ```{r}
+
+`r ''` ```
+```
+
+Neste espaço podemos escrever códigos do R normalmente, como se estivéssemos em um script.
+
+### Ver também:
+
+- [Manual do Pandoc](https://pandoc.org/MANUAL.html)
+- [Guia definitivo do R Markdown](https://bookdown.org/yihui/rmarkdown/)
++ [Markdown Basics ](https://rmarkdown.rstudio.com/authoring_basics.html), do site do RStudio.
+
