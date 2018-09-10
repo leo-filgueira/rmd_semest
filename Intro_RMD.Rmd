@@ -1,5 +1,5 @@
 ---
-title: "Introdução ao R Markdown"
+title: "Relatórios dinâmicos com o R Markdown"
 author: "Leonardo Filgueira e Matheus Camelo"
 date: "17/10/2018"
 output: 
@@ -46,7 +46,7 @@ Sendo que o último pacote, `shiny`, será necessário apenas ao criar relatóri
 
 ## Criando um arquivo .Rmd
 
-- No RStudio, basta clicar em *File*, *New File*, *R Markdown*:
+- No RStudio, basta clicar em *File* > *New File* > *R Markdown*:
 
     ![](img/New.png)
 
@@ -68,10 +68,11 @@ A seguir serão apresentadas algumas maneiras de aplicar formatações ao texto.
 
 <!-- https://github.com/mustafaascha/rmarkdownTutorial -->
 
-#### Título, subtítulos...
+#### Título, subtítulos... Na verdade seções, subseções, não???
 
 Ao adicionar \# no início de uma linha, o texto nessa linha será transformado em título, se colocarmos \#\#, teremos um subtítulo, e por aí vai...
 
+<center>
 ```
 # Título de nível 1
 
@@ -81,22 +82,26 @@ Ao adicionar \# no início de uma linha, o texto nessa linha será transformado 
 
 #### Título de nível 4
 ```
+</center>
 
 #### Itálico
 
 Se quisermos que um trecho do texto seja formatado em _itálico_, usamos \* ou \_ entre o trecho:
 
+<center>
 ```
 *Este texto ficará em itálico*, _assim como este aqui._
 ```
-
+</center>
 #### Negrito
 
 Para colocar um texto em negrito, podemos envolver esse texto com \*\* ou \_\_:
 
+<center>
 ```
 **Este texto ficará em negrito**, __assim como este aqui.__
 ```
+</center>
 
 #### Parágrafo
 
@@ -130,6 +135,7 @@ Bloco de texto que vem antes da lista.
 
 Para que a lista seja ordenada, basta utilizar um número com um ponto a seguir:
 
+
 ```
 1. Item 1
     + Item a.
@@ -162,17 +168,25 @@ Também é possível criar as listas ordenadas com \#\.
 
 O link pode ser simplesmente colado no texto, ou então pode ser inserido da seguinte maneira:
 
+<center>
 ```
 [Frase que aparecerá no texto como link](link)
 ```
+</center>
 
 #### Imagens
 
 Uma das maneiras de inserir imagens no R Markdown é bem parecida com a maneira de inserir link:
 
+<center>
 ```
+Vindas do seu computador:
 ![Legenda opcional](caminho_para_imagem)
+
+Vindas da web:
+![Legenda opcional](link_da_imagem)
 ```
+</center>
 
 O caminho para a imagem deve ser colocado sem aspas. Caso a imagem esteja na mesma pasta do arquivo .Rmd, então será necessário apenas escrever o nome da imagem.
 
@@ -218,12 +232,14 @@ $$ f_X(x) = \frac{1}{\sqrt{2 \pi \sigma}} \exp{\frac{-(x - \mu)^2}{2\sigma^2}} $
 
 Usamos \| para separar colunas e \- para delimitar o cabeçalho da tabela:
 
+<center>
 ```
 Primeira coluna  | Segunda coluna
 ---------------- | --------------
 Conteúdo         | Conteúdo
 Conteúdo         | Conteúdo
 ```
+</center>
 
 ### Código
 
