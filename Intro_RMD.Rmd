@@ -6,6 +6,8 @@ output:
   prettydoc::html_pretty:
     theme: cayman
     highlight: github
+    includes:
+      in_header: imagem.html
 --- 
 
 R Markdown é, basicamente, uma combinação entre códigos do R e texto em *Markdown*.
