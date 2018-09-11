@@ -265,11 +265,11 @@ Para inserir um bloco de códigos, clique no botão "Insert" e selecione "R"
 
 Dessa maneira será inserido, onde o cursor estiver localizado, o seguinte:
 
-```
+
 `r ''` ```{r}
 
 `r ''` ```
-```
+
 
 Neste espaço podemos escrever códigos do R normalmente, como se estivéssemos em um script.
 
@@ -277,5 +277,5 @@ Neste espaço podemos escrever códigos do R normalmente, como se estivéssemos 
 
 - [Manual do Pandoc](https://pandoc.org/MANUAL.html)
 - [Guia definitivo do R Markdown](https://bookdown.org/yihui/rmarkdown/)
-+ [Markdown Basics ](https://rmarkdown.rstudio.com/authoring_basics.html), do site do RStudio.
-
+- [Markdown Basics ](https://rmarkdown.rstudio.com/authoring_basics.html), do site do RStudio.
+- http://cursos.leg.ufpr.br/prr/capLitProg.html
