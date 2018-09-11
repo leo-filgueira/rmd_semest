@@ -279,3 +279,4 @@ Neste espaço podemos escrever códigos do R normalmente, como se estivéssemos 
 - [Guia definitivo do R Markdown](https://bookdown.org/yihui/rmarkdown/)
 - [Markdown Basics ](https://rmarkdown.rstudio.com/authoring_basics.html), do site do RStudio.
 - http://cursos.leg.ufpr.br/prr/capLitProg.html
+- https://rmarkdown.rstudio.com/articles_docx.html
