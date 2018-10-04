@@ -1,0 +1,36 @@
+---
+title: "Relatórios dinâmicos"
+author: "Leonardo Filgueira e Matheus Camelo"
+date: "17 de outubro de 2018"
+output: revealjs::revealjs_presentation
+---
+
+## Relatórios manuais
+
+### Procedimentos
+
+- Importamos os dados num software.
+
+- Fazemos as análises e obtemos os resultados.
+
+- Copiamos e colamos os resultados num editor de texto (word, por exemplo).
+
+## Relatórios manuais
+
+## Desvantagens
+
+- Procedimento manual, que pode causar muitos erros.
+
+- Tedioso.
+
+- Não facilmente reproduzível.
+
+- Retrabalho caso haja qualquer modificação nos dados/análise.
+
+## Relatórios dinâmicos
+
+- Num único arquivo reunem-se código com importação, análise dos dados e produção dos resultados com o texto do relatório.
+
+- Pode ser um pouco trabalhoso para uma tarefa muito simples e pequena.
+
+- Garante reproducibilidade.
