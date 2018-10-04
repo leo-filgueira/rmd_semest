@@ -282,3 +282,4 @@ Neste espaço podemos escrever códigos do R normalmente, como se estivéssemos 
 - [Markdown Basics ](https://rmarkdown.rstudio.com/authoring_basics.html), do site do RStudio.
 - http://cursos.leg.ufpr.br/prr/capLitProg.html
 - https://rmarkdown.rstudio.com/articles_docx.html
+- http://www.estatisticacomr.uff.br/wp-content/uploads/2016/05/Palestra_ManuelFebrero_SER.pdf
