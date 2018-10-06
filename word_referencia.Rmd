@@ -1,0 +1,11 @@
+---
+title: "Arquivo de referência - word"
+date: "17/08/2018"
+output:
+  rmdformats::readthedown:
+    highlight: kate
+---
+
+## Fonte
+
+- https://rmarkdown.rstudio.com/articles_docx.html
