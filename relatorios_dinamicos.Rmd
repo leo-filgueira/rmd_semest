@@ -2,7 +2,7 @@
 title: "Relatórios dinâmicos"
 author: "Leonardo Filgueira e Matheus Camelo"
 date: "17 de outubro de 2018"
-output: revealjs::revealjs_presentation
+output: beamer_presentation
 ---
 
 ## Relatórios manuais
@@ -14,8 +14,6 @@ output: revealjs::revealjs_presentation
 - Fazemos as análises e obtemos os resultados.
 
 - Copiamos e colamos os resultados num editor de texto (word, por exemplo).
-
-## Relatórios manuais
 
 ## Desvantagens
 
@@ -34,3 +32,7 @@ output: revealjs::revealjs_presentation
 - Pode ser um pouco trabalhoso para uma tarefa muito simples e pequena.
 
 - Garante reproducibilidade.
+
+## Veja também
+
+- [**Essa**](http://www.estatisticacomr.uff.br/wp-content/uploads/2016/05/Palestra_ManuelFebrero_SER.pdf) apresentação sobre relatórios dinâmicos.
