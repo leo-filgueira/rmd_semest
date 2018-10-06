@@ -34,26 +34,56 @@ Para inserir uma tabela de conteúdos (*table of contentes*), basta inserir no Y
 Suponha que no índice só devam aparecer títulos de nível até 
 2. Para isso utilizamos `toc_depth: 2` no cabeçalho. Lembre-se que o nível do título é definido pela quatidade de `#`.
 
-## Numerando seções
+# Numerando títulos
 
+Podemos numerar os títulos facilmente, quando o outpt é um documento pdf ou html, adicionando `number_sections: true` no YAML. Com isso, todos os títulos serão numerados. Já ao escolher um documento de word como output, é necessário criar um arquivo de referência. Veja [este tutorial](word_referencia.html) para aprender a criar um arquivo de referência.
 
+Para que um título específico não seja numerado, mesmo definindo `number_sections: true`, basta adicionar `{-}` ao lado do nome do título:
 
-<div class="col2">
-```{r}
-dplyr::as_tibble(iris)
 ```
-```{r}
-dplyr::as_tibble(mtcars)
+## Título que será numerado
+
+## Título que não será numerado {-}
 ```
-</div>
 
-## title {.tabset .tabset-fade}
-content above tabbed region.
+# Helps
 
-### tab 1
+Para consultar possíveis argumentos colocados no YAML, basta verificar o help das funções do pacote `rmarkdown` de mesmo nome do `output`. Por exemplo, se `output: html_document`, devemos ver o help da função `html_document`, do pacote `rmarkdown`. 
 
-tab content 1
+# Abas
 
-### tab 2
+Para inserir abas em um documento html, basta inserir, ao lado de um título: `{.tabset}`. Em seguida inserimos subtítulos, que se tornarão abas. O conteúdo abaixo de cada subtítulo será associado à respectiva guia. Para fechar a divisão em abas inserimos um título de nível igual ao que abriu as abas.
 
-tab content 2
+```
+## Seção {.tabset}
+
+### Primeira aba
+
+Conteúdo da primeira aba
+
+### Segunda aba
+
+Conteúdo da segunda aba
+
+## Próxima seção
+
+Conteúdo após a divisão em abas
+```
+
+Caso estejamos com `number_sections: true` e não queiramos criar uma próxima seção, basta inserir `## {-}`
+
+# Templates (html)
+
+Existem pacotes que fornecem templates para os relatórios em html diferentes do template básico, como é o caso deste relatório. Para isso basta instalar o pacote no R e, ao criar um novo R Markdown, clicamos em *From template* e selecionamos o template do pacote desejado. Citamos dois pacotes:
+
+- [`prettydoc`](http://yixuan.cos.name/prettydoc/)
+- [`rmdformats`](https://github.com/juba/rmdformats)
+
+<!-- <div class="col2"> -->
+<!-- ```{r} -->
+<!-- dplyr::as_tibble(iris) -->
+<!-- ``` -->
+<!-- ```{r} -->
+<!-- dplyr::as_tibble(mtcars) -->
+<!-- ``` -->
+<!-- </div> -->
