@@ -1,0 +1,59 @@
+---
+title: "Funcionalidades do Rmarkdown"
+author: "Leonardo Filgueira e Matheus Camelo"
+date: "17 de outubro de 2018"
+output:
+  rmdformats::readthedown:
+    code_folding: hide
+    self_contained: true
+    thumbnails: false
+    lightbox: false
+    number_sections: true
+---
+
+<style>
+  .col2 {
+    columns: 2 200px;         /* number of columns and width in pixels*/
+    -webkit-columns: 2 200px; /* chrome, safari */
+    -moz-columns: 2 200px;    /* firefox */
+  }
+</style>
+
+# Tabela de conteúdos
+
+Para inserir uma tabela de conteúdos (*table of contentes*), basta inserir no YAML: `toc: true`. Com isso um índice será inserido no documento. Podemos também incluir apenas títulos de nível maior ou igual a $k$. Veja o seguinte exemplo:
+
+```
+# Título nível 1
+
+## Título nível 2
+
+### Título nível 3
+```
+
+Suponha que no índice só devam aparecer títulos de nível até 
+2. Para isso utilizamos `toc_depth: 2` no cabeçalho. Lembre-se que o nível do título é definido pela quatidade de `#`.
+
+## Numerando seções
+
+
+
+<div class="col2">
+```{r}
+dplyr::as_tibble(iris)
+```
+```{r}
+dplyr::as_tibble(mtcars)
+```
+</div>
+
+## title {.tabset .tabset-fade}
+content above tabbed region.
+
+### tab 1
+
+tab content 1
+
+### tab 2
+
+tab content 2
