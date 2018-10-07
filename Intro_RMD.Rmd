@@ -10,6 +10,10 @@ output:
       in_header: imagem.html
 --- 
 
+&nbsp;
+
+&nbsp;
+
 R Markdown é, basicamente, uma combinação entre códigos do R e texto em *Markdown*.
 
 # O que é *Markdown*?
@@ -18,11 +22,15 @@ Segundo seu próprio criador:
 
 > Markdown é uma ferramenta de conversão de texto para HTML para escritores da web. Ele permite uma escrita fácil de ler, fácil de escrever, num formato de texto plano, e então converte este texto para HTML. (Markdown is a text-to-HTML conversion tool for web writers. Markdown allows you to write using an easy-to-read, easy-to-write plain text format, then convert it to structurally valid XHTML (or HTML)).
 
+&nbsp;
+
 - *Markdown* é uma *linguagem de marcação*.
 
 - Uma *linguagem de marcação* "possui uma forma de descrever a estrutura lógica ou semântica de um documento e fornecer instruções a computadores sobre como apresentar o conteúdo de um arquivo".
 
 - Possui formatação simples, com o objetivo de não gastar muito tempo na formatação, e sim na escrita do texto.
+
+&nbsp;
 
 # Vantagens e aplicações
 
@@ -36,6 +44,8 @@ Segundo seu próprio criador:
 
 - Uso de algumas estruturas do $\LaTeX{}$.
 
+&nbsp;
+
 # Pacotes necessários
 
 Para criar um documento dinâmico no R Markdown são necessários os seguintes pacotes:
@@ -44,6 +54,8 @@ Para criar um documento dinâmico no R Markdown são necessários os seguintes p
 - [`knitr`](https://yihui.name/knitr/)
 
 Além disso ao criar relatórios interativos, pode ser necessário o pacote [`shiny`](https://shiny.rstudio.com/).
+
+&nbsp;
 
 # Criando um arquivo .Rmd
 
@@ -62,12 +74,16 @@ Além disso ao criar relatórios interativos, pode ser necessário o pacote [`sh
 - Vejamos a estrutura básica de um arquivo .Rmd:
 
     ![](img/Estrutura_RMD.png)
+    
+&nbsp;
 
 ## Formatação do texto
 
 A seguir serão apresentadas algumas maneiras de aplicar formatações ao texto. Para mais detalhes, veja o [guia de referência do rmarkdown](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf) e o [rmarkdown cheatsheet](https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf). 
 
 <!-- https://github.com/mustafaascha/rmarkdownTutorial -->
+
+&nbsp;
 
 ### Seções, subseções, ...
 
@@ -85,25 +101,25 @@ Ao adicionar \# no início de uma linha, o texto nessa linha será transformado 
 ```
 </center>
 
-### Itálico
+&nbsp;
 
-Se quisermos que um trecho do texto seja formatado em _itálico_, usamos \* ou \_ entre o trecho:
+### Itálico & Negrito
 
-<center>
-```
-*Este texto ficará em itálico*, _assim como este aqui._
-```
-</center>
-
-### Negrito
-
-Para colocar um texto em negrito, podemos envolver esse texto com \*\* ou \_\_:
+Se quisermos que um trecho do texto seja formatado em _itálico_, usamos \* ou \_ entre o trecho. E para colocar em **negrito** usamos \*\* ou \_\_:
 
 <center>
 ```
-**Este texto ficará em negrito**, __assim como este aqui.__
+*Este texto ficará em itálico*,     _assim como este aqui._
+
+**Este texto ficará em negrito**,    __assim como este aqui.__
+
+***Este texto ficará em italíco e negrito***,    ___assim como este aqui.___
 ```
 </center>
+
+Além disso, usamos \~\~ para o trecho ficar ~~riscado~~.
+
+&nbsp;
 
 ### Parágrafo
 
@@ -114,6 +130,10 @@ Este é o texto do primeiro parágrafo.
 
 Este é o texto do segundo parágrafo. Note a linha em branco entre eles.
 ```
+
+Caso queira aumentar o espaço entre os dois parágrafos use entre eles o comando `&nbsp;`.
+
+&nbsp;
 
 ### Listas
 
@@ -132,11 +152,20 @@ Bloco de texto que vem antes da lista.
         * Lista da sub lista do segundo item
 - Terceiro item da lista.
 ```
+Resultando em:
+
+- Primeiro item da lista.
+    + Sub lista do primeiro item
+    + Outro elemento da sub lista
+- Segundo item da lista.
+    + Sub lista do segundo item.
+        * Lista da sub lista do segundo item
+- Terceiro item da lista.
+
 
 #### Ordenadas
 
 Para que a lista seja ordenada, basta utilizar um número com um ponto a seguir:
-
 
 ```
 1. Item 1
@@ -146,6 +175,15 @@ Para que a lista seja ordenada, basta utilizar um número com um ponto a seguir:
 2. Item 2
 3. Item 3
 ```
+Resultando em:
+
+1. Item 1
+    + Item a.
+    + Item b.
+    + Item c.
+2. Item 2
+3. Item 3
+
 
 O primeiro número inserido será usado na lista. Os outros seguirão a sequência, não importanto o número inserido. A lista a seguir produzirá o mesmo resultado que a lista anterior:
 
@@ -166,15 +204,19 @@ Também é possível criar as listas ordenadas com \#\.
 #. Item 3
 ```
 
+&nbsp;
+
 ### Links
 
 O link pode ser simplesmente colado no texto, ou então pode ser inserido da seguinte maneira:
 
 <center>
 ```
-[Frase que aparecerá no texto como link](link)
+[Frase ou palavra que aparecerá no texto como link](link)
 ```
 </center>
+
+&nbsp;
 
 ### Imagens
 
@@ -190,7 +232,9 @@ Vindas da web:
 ```
 </center>
 
-O caminho para a imagem deve ser colocado sem aspas. Caso a imagem esteja na mesma pasta do arquivo .Rmd, então será necessário apenas escrever o nome da imagem.
+O caminho para a imagem deve ser colocado sem aspas. Caso a imagem esteja na mesma pasta do arquivo .Rmd, então será necessário apenas escrever o nome da imagem. Para controlar a largura da imagem use \{ width=100% \} (Default).
+
+&nbsp;
 
 ### Citações
 
@@ -202,23 +246,26 @@ Para fazer alguma citação basta utilizar \> no início da linha (o texto será
 > `r ''` r tufte::quote_footer('--- Cabo Daciolo')
 ```
 
+> Sabe sim! Sabe sim! Nós estamos falando aqui de um plano, que chama-se Nova ordem mundial: União de toda a América do Sul, conexão de toda a América do Sul, fazendo apenas, tirando todas as fronteiras, fazendo uma única nação, pátria grande. Poucos ouviram falar disso e vai ser pouco divulgado, isso. Eles sabem do que nós estamos falando. Quero deixar bem claro que no nosso governo o comunismo não vai ter vez. Deixar muito claro isso!
+>
+> `r tufte::quote_footer('--- Cabo Daciolo')`
+
+
 Note que para inserir o autor da frase estamos usando uma função do R. Para funcionar é necessário ter o pacote `tufte` instalado.
+
+&nbsp;
 
 ### Expressões matemáticas
 
 #### Na linha
 
-Qualquer texto que for inserido entre \$ será tratado como equação que será inserida na frase onde for escrita.
+Qualquer texto que for inserido entre \$ será tratado como equação que será inserida na frase onde for escrita. Esses comandos são os mesmos utilizados no $\LaTeX{}$: 
 
 ```
-Sabemos que $2 + 2 = 4$.
+Sabemos que $2^2 + 6 = 10$ e também que $\sqrt{4}^2 = 4$.
 ```
+Sabemos que $2^2 + 6 = 10$ e também que $\sqrt{4} = 2$.
 
-Também é possível escrever equações em $\LaTeX{}$:
-
-```
-Sabemos que $\sqrt{4}^2 = 4$.
-```
 
 #### Em um bloco
 
@@ -227,8 +274,14 @@ Para que a expressão matemática seja inserida em um bloco separado do texto, u
 ```
 Se $X$ tem distribuição normal, então sua função de densidade é dada por:
 
-$$ f_X(x) = \frac{1}{\sqrt{2 \pi \sigma}} \exp{\frac{-(x - \mu)^2}{2\sigma^2}} $$
+$$ f_X(x) = \frac{1}{\sqrt{2 \pi \sigma}} \exp \left \{\frac{-(x - \mu)^2}{2\sigma^2} \right \}$$
 ```
+Se $X$ tem distribuição normal, então sua função de densidade é dada por:
+
+$$ f_X(x) = \frac{1}{\sqrt{2 \pi \sigma}} \exp \left \{\frac{-(x - \mu)^2}{2\sigma^2} \right \}
+ $$
+
+&nbsp;
 
 ### Tabelas
 
@@ -242,6 +295,13 @@ Conteúdo         | Conteúdo
 Conteúdo         | Conteúdo
 ```
 </center>
+
+Primeira coluna  | Segunda coluna
+---------------- | --------------
+Conteúdo         | Conteúdo
+Conteúdo         | Conteúdo
+
+&nbsp;
 
 ## Código
 
@@ -259,6 +319,8 @@ Se desejarmos que uma palavra (ou trecho) tenha a aparência de código mas não
 Para descobrir o número de linhas de um data.frame utilizamos a função `nrow`
 ```
 
+&nbsp;
+
 ### Bloco de código (chunk)
 
 Para inserir um bloco de códigos, clique no botão "Insert" e selecione "R"
@@ -275,9 +337,52 @@ Dessa maneira será inserido, onde o cursor estiver localizado, o seguinte:
 
 Neste espaço podemos escrever códigos do R normalmente, como se estivéssemos em um script.
 
+#### Opções do chunk
+
+`eval = FALSE` - mostra o chunk, mas não o executa;
+
+`echo = FALSE` - executa o chunk, mas não o mostra;
+
+`warning = FALSE` - não mostra mensagens de erros;
+
+`message = FALSE` - não mostra mensagens de carregamento de funções;
+
+`fig.align`, `fig.height`, `fig.width`: mexe no alinhamento, altura e largura da imagem/figura.
+
+https://sebastiansauer.github.io/figure_sizing_knitr/
+
+`cache = TRUE` - armazena o output do chunk em pastas separadas. Evita que a geração do relatório demore. É necessário nomear o chunk `{r nome_chunk, eval = ...}`
+
+Exemplo:
+
+![](img/exemplo_chunk.png)
+
+```{r, echo = FALSE}
+library(datasets)
+data("iris")
+```
+
+```{r, eval = FALSE}
+summary(iris)
+```
+
+&nbsp;
+
+## Exercício prático
+
+Crie um relatório em HTML conforme o arquivo **exercicio_pratico.html**.
+
+&nbsp;
+
+&nbsp;
+
 ## Ver também:
 
 - [Manual do Pandoc](https://pandoc.org/MANUAL.html)
 - [Guia definitivo do R Markdown](https://bookdown.org/yihui/rmarkdown/)
 - [Markdown Basics ](https://rmarkdown.rstudio.com/authoring_basics.html), do site do RStudio.
 - http://cursos.leg.ufpr.br/prr/capLitProg.html
+- https://rstudio-pubs-static.s3.amazonaws.com/46674_35d398934e474467aa3655546d1531b0.html#25
+- https://rstudio-pubs-static.s3.amazonaws.com/46674_35d398934e474467aa3655546d1531b0.html#75
+
+
