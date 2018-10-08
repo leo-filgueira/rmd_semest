@@ -249,7 +249,7 @@ Este é o texto do segundo parágrafo. Note a linha em branco entre eles.</code>
 <h3>Links</h3>
 <p>O link pode ser simplesmente colado no texto, ou então pode ser inserido da seguinte maneira:</p>
 <center>
-<pre><code>[Frase ou palavra que aparecerá no texto como link](link)</code></pre>
+<pre><code>[Frase que aparecerá no texto como link](link)</code></pre>
 </center>
 <p> </p>
 </div>
@@ -263,7 +263,7 @@ Este é o texto do segundo parágrafo. Note a linha em branco entre eles.</code>
 Vindas da web:
 ![Legenda opcional](link_da_imagem)</code></pre>
 </center>
-<p>O caminho para a imagem deve ser colocado sem aspas. Caso a imagem esteja na mesma pasta do arquivo .Rmd, então será necessário apenas escrever o nome da imagem. Para controlar a largura da imagem use { width=100% } (Default).</p>
+<p>O caminho para a imagem deve ser colocado sem aspas. Caso a imagem esteja na mesma pasta do arquivo .Rmd, então será necessário apenas escrever o nome da imagem. Para controlar a largura da imagem use <code>width</code>, cujo default é <code>{width=100%}</code>.</p>
 <p> </p>
 </div>
 <div id="citacoes" class="section level3">
@@ -354,13 +354,44 @@ Conteúdo         | Conteúdo</code></pre>
 <p>Neste espaço podemos escrever códigos do R normalmente, como se estivéssemos em um script.</p>
 <div id="opcoes-do-chunk" class="section level4">
 <h4>Opções do chunk</h4>
-<p><code>eval = FALSE</code> - mostra o chunk, mas não o executa;</p>
-<p><code>echo = FALSE</code> - executa o chunk, mas não o mostra;</p>
-<p><code>warning = FALSE</code> - não mostra mensagens de erros;</p>
-<p><code>message = FALSE</code> - não mostra mensagens de carregamento de funções;</p>
-<p><code>fig.align</code>, <code>fig.height</code>, <code>fig.width</code>: mexe no alinhamento, altura e largura da imagem/figura.</p>
-<p><a href="https://sebastiansauer.github.io/figure_sizing_knitr/" class="uri">https://sebastiansauer.github.io/figure_sizing_knitr/</a></p>
-<p><code>cache = TRUE</code> - armazena o output do chunk em pastas separadas. Evita que a geração do relatório demore. É necessário nomear o chunk <code>{r nome_chunk, eval = ...}</code></p>
+<table>
+<colgroup>
+<col width="20%"></col>
+<col width="79%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th>Opção</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>eval = FALSE</code></td>
+<td>mostra o chunk, mas não o executa;</td>
+</tr>
+<tr class="even">
+<td><code>echo = FALSE</code></td>
+<td>executa o chunk, mas não o mostra;</td>
+</tr>
+<tr class="odd">
+<td><code>warning = FALSE</code></td>
+<td>não mostra mensagens de erros;</td>
+</tr>
+<tr class="even">
+<td><code>message = FALSE</code></td>
+<td>não mostra mensagens de carregamento de funções;</td>
+</tr>
+<tr class="odd">
+<td><code>fig.align</code>, <code>fig.height</code>, <code>fig.width</code></td>
+<td>mexe no alinhamento, altura e largura da imagem/figura. Veja mais opções <a href="https://sebastiansauer.github.io/figure_sizing_knitr/">aqui</a>.</td>
+</tr>
+<tr class="even">
+<td><code>cache = TRUE</code></td>
+<td>armazena o output do chunk em pastas separadas. Evita que a geração do relatório demore. É recomendado nomear o chunk <code>{r nome_chunk}</code></td>
+</tr>
+</tbody>
+</table>
 <p>Exemplo:</p>
 <div class="figure">
 <img src="data:image/png;base64,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" />
@@ -373,7 +404,7 @@ Conteúdo         | Conteúdo</code></pre>
 </div>
 <div id="exercicio-pratico" class="section level2">
 <h2>Exercício prático</h2>
-<p>Crie um relatório em HTML conforme o arquivo <strong>exercicio_pratico.html</strong>.</p>
+<p>Crie um relatório em HTML conforme o seguinte <a href="../Exercício/exercicio_pratico.html">modelo</a>.</p>
 <p> </p>
 <p> </p>
 </div>

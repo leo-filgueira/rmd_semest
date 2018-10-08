@@ -212,7 +212,7 @@ O link pode ser simplesmente colado no texto, ou então pode ser inserido da seg
 
 <center>
 ```
-[Frase ou palavra que aparecerá no texto como link](link)
+[Frase que aparecerá no texto como link](link)
 ```
 </center>
 
@@ -232,7 +232,7 @@ Vindas da web:
 ```
 </center>
 
-O caminho para a imagem deve ser colocado sem aspas. Caso a imagem esteja na mesma pasta do arquivo .Rmd, então será necessário apenas escrever o nome da imagem. Para controlar a largura da imagem use \{ width=100% \} (Default).
+O caminho para a imagem deve ser colocado sem aspas. Caso a imagem esteja na mesma pasta do arquivo .Rmd, então será necessário apenas escrever o nome da imagem. Para controlar a largura da imagem use `width`, cujo default é `{width=100%}`.
 
 &nbsp;
 
@@ -339,19 +339,14 @@ Neste espaço podemos escrever códigos do R normalmente, como se estivéssemos 
 
 #### Opções do chunk
 
-`eval = FALSE` - mostra o chunk, mas não o executa;
-
-`echo = FALSE` - executa o chunk, mas não o mostra;
-
-`warning = FALSE` - não mostra mensagens de erros;
-
-`message = FALSE` - não mostra mensagens de carregamento de funções;
-
-`fig.align`, `fig.height`, `fig.width`: mexe no alinhamento, altura e largura da imagem/figura.
-
-https://sebastiansauer.github.io/figure_sizing_knitr/
-
-`cache = TRUE` - armazena o output do chunk em pastas separadas. Evita que a geração do relatório demore. É recomendado nomear o chunk `{r nome_chunk, eval = ...}`
+Opção         | Resultado
+--------------| ---------------------------------------------------------- 
+`eval = FALSE` | mostra o chunk, mas não o executa;
+`echo = FALSE` | executa o chunk, mas não o mostra;
+`warning = FALSE` | não mostra mensagens de erros;
+`message = FALSE` | não mostra mensagens de carregamento de funções;
+`fig.align`, `fig.height`, `fig.width` | mexe no alinhamento, altura e largura da imagem/figura. Veja mais opções [aqui](https://sebastiansauer.github.io/figure_sizing_knitr/).
+`cache = TRUE` | armazena o output do chunk em pastas separadas. Evita que a geração do relatório demore. É recomendado nomear o chunk `{r nome_chunk}`
 
 Exemplo:
 
@@ -370,7 +365,7 @@ summary(iris)
 
 ## Exercício prático
 
-Crie um relatório em HTML conforme o seguinte [modelo](exercicio_pratico.html).
+Crie um relatório em HTML conforme o seguinte [modelo](../Exercício/exercicio_pratico.html).
 
 &nbsp;
 
