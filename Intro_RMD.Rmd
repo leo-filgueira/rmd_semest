@@ -370,7 +370,7 @@ summary(iris)
 
 ## Exercício prático
 
-Crie um relatório em HTML conforme o arquivo **exercicio_pratico.html**.
+Crie um relatório em HTML conforme o seguinte [modelo](exercicio_pratico.html).
 
 &nbsp;
 
