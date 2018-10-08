@@ -11,7 +11,7 @@ output:
 
 # 10ª Semana da Estatística da UFF
 
-É um evento anual que acontece durante a genda acadêmica da Universidade. Mais informações consulte o [site](http://www.semest.uff.br/).
+É um evento anual que acontece durante a agenda acadêmica da Universidade. Para mais informações consulte o [site](http://www.semest.uff.br/).
 
 ![Logo da SEMEST](img/semest.jpg)
 
