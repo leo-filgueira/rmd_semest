@@ -283,7 +283,6 @@ Se $X$ tem distribuição normal, então sua função de densidade é dada por:
 $$ f_X(x) = \frac{1}{\sqrt{2 \pi \sigma}} \exp \left \{\frac{-(x - \mu)^2}{2\sigma^2} \right \}
  $$
 
-Dica: use o [Code Cogs](https://www.codecogs.com/latex/eqneditor.php?lang=pt-br) ;)
 
 &nbsp;
 
