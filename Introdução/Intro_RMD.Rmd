@@ -53,6 +53,8 @@ Para criar um documento dinâmico no R Markdown são necessários os seguintes p
 - [`rmarkdown`](https://rmarkdown.rstudio.com/)
 - [`knitr`](https://yihui.name/knitr/)
 
+Também é preciso ter o **pandoc** instalado, que é o programa que faz a conversão do texto *markdown*. Ao utilizar o RStudio não é necessário instalá-lo, mas para checar se ele está instalado, basta executar `rmarkdown::pandoc_available()`. Para verificar qual versão do pandoc está instalada no sistema, usamos `rmarkdown::pandoc_version()`. Caso seja necessário podemos baixar o pandoc [nesta página](https://github.com/jgm/pandoc/releases).
+
 Além disso ao criar relatórios interativos, pode ser necessário o pacote [`shiny`](https://shiny.rstudio.com/).
 
 &nbsp;
@@ -139,27 +141,27 @@ Caso queira aumentar o espaço entre os dois parágrafos use entre eles o comand
 
 #### Não ordenadas
 
-Para fazer listas de tópicos, basta pular uma linha do resto do texto, utilizar \-, \*, ou \+ e escrever o texto, após um espaço. Sub listas devem ser escritas quatro espaços após o início do nível anterior.
+Para fazer listas de tópicos, basta pular uma linha do resto do texto, utilizar \-, \*, ou \+ e escrever o texto, após um espaço. Sub listas devem ser escritas pelo menos dois espaços após o início do nível anterior.
 
 ```
 Bloco de texto que vem antes da lista. 
 
 - Primeiro item da lista.
-    + Sub lista do primeiro item
-    + Outro elemento da sub lista
+  + Sub lista do primeiro item
+  + Outro elemento da sub lista
 - Segundo item da lista.
-    + Sub lista do segundo item.
-        * Lista da sub lista do segundo item
+  + Sub lista do segundo item.
+    * Lista da sub lista do segundo item
 - Terceiro item da lista.
 ```
 Resultando em:
 
 - Primeiro item da lista.
-    + Sub lista do primeiro item
-    + Outro elemento da sub lista
+  + Sub lista do primeiro item
+  + Outro elemento da sub lista
 - Segundo item da lista.
-    + Sub lista do segundo item.
-        * Lista da sub lista do segundo item
+  + Sub lista do segundo item.
+    * Lista da sub lista do segundo item
 - Terceiro item da lista.
 
 

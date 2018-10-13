@@ -150,6 +150,7 @@ code > span.ot { color: #007020; }
 <li><a href="https://rmarkdown.rstudio.com/"><code>rmarkdown</code></a></li>
 <li><a href="https://yihui.name/knitr/"><code>knitr</code></a></li>
 </ul>
+<p>Também é preciso ter o <strong>pandoc</strong> instalado, que é o programa que faz a conversão do texto <em>markdown</em>. Ao utilizar o RStudio não é necessário instalá-lo, mas para checar se ele está instalado, basta executar <code>rmarkdown::pandoc_available()</code>. Para verificar qual versão do pandoc está instalada no sistema, usamos <code>rmarkdown::pandoc_version()</code>. Caso seja necessário podemos baixar o pandoc <a href="https://github.com/jgm/pandoc/releases">nesta página</a>.</p>
 <p>Além disso ao criar relatórios interativos, pode ser necessário o pacote <a href="https://shiny.rstudio.com/"><code>shiny</code></a>.</p>
 <p> </p>
 </div>
@@ -211,15 +212,15 @@ Este é o texto do segundo parágrafo. Note a linha em branco entre eles.</code>
 <h3>Listas</h3>
 <div id="nao-ordenadas" class="section level4">
 <h4>Não ordenadas</h4>
-<p>Para fazer listas de tópicos, basta pular uma linha do resto do texto, utilizar -, *, ou + e escrever o texto, após um espaço. Sub listas devem ser escritas quatro espaços após o início do nível anterior.</p>
+<p>Para fazer listas de tópicos, basta pular uma linha do resto do texto, utilizar -, *, ou + e escrever o texto, após um espaço. Sub listas devem ser escritas pelo menos dois espaços após o início do nível anterior.</p>
 <pre><code>Bloco de texto que vem antes da lista. 
 
 - Primeiro item da lista.
-    + Sub lista do primeiro item
-    + Outro elemento da sub lista
+  + Sub lista do primeiro item
+  + Outro elemento da sub lista
 - Segundo item da lista.
-    + Sub lista do segundo item.
-        * Lista da sub lista do segundo item
+  + Sub lista do segundo item.
+    * Lista da sub lista do segundo item
 - Terceiro item da lista.</code></pre>
 <p>Resultando em:</p>
 <ul>
