@@ -1,8 +1,10 @@
 ---
-title: "Relatórios dinâmicos"
+title: "RelatÃ³rios dinÃ¢micos"
 author: "Leonardo Filgueira e Matheus Camelo"
 date: "17 de outubro de 2018"
-output: beamer_presentation
+output:
+  slidy_presentation: default
+  beamer_presentation: default
 ---
 
 ## Relatórios manuais
@@ -31,7 +33,7 @@ output: beamer_presentation
 
 - Pode ser um pouco trabalhoso para uma tarefa muito simples e pequena.
 
-- Garante reproducibilidade.
+- Garante reprodutibilidade.
 
 ## Veja também
 

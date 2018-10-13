@@ -1,5 +1,5 @@
 ---
-title: "Observações e outras formatações"
+title: "Funcionalidades e outras formatações"
 author: "Leonardo Filgueira e Matheus Camelo"
 date: "17 de outubro de 2018"
 output:
@@ -24,7 +24,10 @@ output:
   }
 </style>
 
-# Tabela de conteúdos
+
+# Opções do YAML
+
+## Tabela de conteúdos {-}
 
 Para inserir uma tabela de conteúdos (*table of contentes*), basta inserir no YAML: `toc: true`. Com isso um índice será inserido no documento. Podemos também incluir apenas títulos de nível maior ou igual a $k$. Veja o seguinte exemplo:
 
@@ -39,11 +42,11 @@ Para inserir uma tabela de conteúdos (*table of contentes*), basta inserir no Y
 Suponha que no índice só devam aparecer títulos de nível até 
 2. Para isso utilizamos `toc_depth: 2` no cabeçalho. Lembre-se que o nível do título é definido pela quatidade de `#`.
 
-# Numeração de títulos
+## Numeração de seções {-}
 
-Podemos numerar os títulos facilmente, quando o outpt é um documento pdf ou html, adicionando `number_sections: true` no YAML. Com isso, todos os títulos serão numerados. Já ao escolher um documento de word como output, é necessário criar um arquivo de referência. Veja [este tutorial](word_referencia.html) para aprender a criar um arquivo de referência.
+Podemos numerar as seções facilmente, quando o outpt é um documento pdf ou html, adicionando `number_sections: true` no YAML. Com isso, todos as seções serão numeradas. Já ao escolher um documento de word como output, é necessário criar um arquivo de referência. Veja [este tutorial](word_referencia.html) para aprender a criar um arquivo de referência.
 
-Para que um título específico não seja numerado, mesmo definindo `number_sections: true`, basta adicionar `{-}` ao lado do nome do título:
+Para que uma seção específica não seja numerada, mesmo definindo `number_sections: true`, basta adicionar `{-}` ao lado do nome da seção:
 
 ```
 ## Título que será numerado
@@ -51,18 +54,24 @@ Para que um título específico não seja numerado, mesmo definindo `number_sect
 ## Título que não será numerado {-}
 ```
 
-# Instalação de pacotes
+**Exemplo**:
 
-Caso seja necessário executar a instalação de pacotes num arquivo .Rmd é necessário fornecer o repositório através do argumento `repos`. Caso contrário a execução será interrompida por um erro. Um possível repositório a ser utilizado é o da Fiocruz. O comando deve ficar dessa maneira:
-
-```{r eval = F}
-install.packages("DT", repos = "https://cran.fiocruz.br/")
 ```
+output:
+  html_document:
+    toc: true
+    number_sections: true
+```
+![](opcoes_yaml.png)
 
 
-# Helps
 
-Para consultar possíveis argumentos colocados no YAML, basta verificar o help das funções do pacote `rmarkdown` de mesmo nome do `output`. Por exemplo, se `output: html_document`, devemos ver o help da função `html_document`, do pacote `rmarkdown`. 
+## Helps e outras opções {-}
+
+Para consultar possíveis argumentos colocados no YAML, basta verificar o help das funções do pacote `rmarkdown` de mesmo nome do `output`. Por exemplo, se `output: html_document`, devemos ver o help da função `html_document`, do pacote `rmarkdown`.
+
+&nbsp;
+
 
 # Abas {#abas}
 
@@ -84,7 +93,13 @@ Conteúdo da segunda aba
 Conteúdo após a divisão em abas
 ```
 
-Caso estejamos com `number_sections: true` e não queiramos criar uma próxima seção, basta inserir `## {-}`
+Caso estejamos com `number_sections: true` e não queiramos criar uma próxima seção, basta inserir `## {-}`.
+
+**Exemplo**:
+
+![](abas2.png)
+
+&nbsp;
 
 # Templates (html)
 
@@ -122,4 +137,23 @@ Veja exemplos de relatórios utilizando estes pacotes:
 [![](temp_img/docco.png)](https://cdn.rawgit.com/juba/rmdformats/master/resources/examples/html_docco/html_docco_sample.html)
 [![](temp_img/tufte.png)](https://rstudio.github.io/tufte/)
 </div>
+
+&nbsp;
+
+&nbsp;
+
+<center>
+
+**Considerações finais**
+
+</center>
+
+
+&nbsp;
+
+&nbsp;
+
+
+
+
 

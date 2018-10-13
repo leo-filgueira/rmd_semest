@@ -38,7 +38,7 @@ Segundo seu próprio criador:
 
 - Produz documentos dinâmicos. Caso seja modificado o código do R, ou algum resultado do código, o resultado será atualizado ao compilar o arquivo. Não é necessário fazer as alterações manualmente;
 
-- Reproducibilidade. Este arquivo, por exemplo, pode ser reproduzido, desde que o computador possua o R com os pacotes devidamente instalados.
+- Reprodutibilidade. Este arquivo, por exemplo, pode ser reproduzido desde que o computador possua o R com os pacotes devidamente instalados.
 
 - Variedade de formatos de *output*, sejam formatos estáticos ou dinâmicos, desde um documento de word até um HTML.
 
@@ -87,19 +87,19 @@ A seguir serão apresentadas algumas maneiras de aplicar formatações ao texto.
 
 &nbsp;
 
-### Seções, subseções, ...
+### Seções e subseções
 
-Ao adicionar \# no início de uma linha, o texto nessa linha será transformado em título, se colocarmos \#\#, teremos um subtítulo, e por aí vai...
+Ao adicionar \# no início de uma linha, o texto nessa linha será transformado em seção, se colocarmos \#\#, teremos uma subseção, e por aí vai...
 
 <center>
 ```
-# Título de nível 1
+# Seção de nível 1
 
-## Título de nível 2
+## Seção de nível 2
 
-### Título de nível 3
+### Seção de nível 3
 
-#### Título de nível 4
+#### Seção de nível 4
 ```
 </center>
 
@@ -214,7 +214,7 @@ O link pode ser simplesmente colado no texto, ou então pode ser inserido da seg
 
 <center>
 ```
-[Frase que aparecerá no texto como link](link)
+[Trecho que aparecerá no texto como link](link)
 ```
 </center>
 
@@ -282,6 +282,8 @@ Se $X$ tem distribuição normal, então sua função de densidade é dada por:
 
 $$ f_X(x) = \frac{1}{\sqrt{2 \pi \sigma}} \exp \left \{\frac{-(x - \mu)^2}{2\sigma^2} \right \}
  $$
+
+Dica: use o [Code Cogs](https://www.codecogs.com/latex/eqneditor.php?lang=pt-br) ;)
 
 &nbsp;
 
@@ -365,6 +367,18 @@ summary(iris)
 
 &nbsp;
 
+#### Instalação de pacotes
+
+Caso seja necessário executar a instalação de pacotes num arquivo .Rmd é necessário fornecer o repositório através do argumento `repos`. Caso contrário a execução será interrompida por um erro. Um possível repositório a ser utilizado é o da Fiocruz. O comando deve ficar dessa maneira:
+
+```{r eval = F}
+install.packages("DT", repos = "https://cran.fiocruz.br/")
+```
+
+&nbsp;
+
+&nbsp;
+
 ## Exercício prático
 
 Crie um relatório em HTML conforme o seguinte [modelo](../Exercício/exercicio_pratico.html).
@@ -380,6 +394,5 @@ Crie um relatório em HTML conforme o seguinte [modelo](../Exercício/exercicio_
 - [Markdown Basics ](https://rmarkdown.rstudio.com/authoring_basics.html), do site do RStudio.
 - http://cursos.leg.ufpr.br/prr/capLitProg.html
 - https://rstudio-pubs-static.s3.amazonaws.com/46674_35d398934e474467aa3655546d1531b0.html#25
-- https://rstudio-pubs-static.s3.amazonaws.com/46674_35d398934e474467aa3655546d1531b0.html#75
 
 
