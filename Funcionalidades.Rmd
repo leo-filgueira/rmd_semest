@@ -92,6 +92,7 @@ Existem pacotes que fornecem templates para os relatórios em html diferentes do
 
 - [`prettydoc`](http://yixuan.cos.name/prettydoc/)
 - [`rmdformats`](https://github.com/juba/rmdformats)
+- [`tufte`](https://github.com/rstudio/tufte)
 
 Em geral esses pacotes permitem as mesmas formatações de qualquer relatório em html. No entanto, algumas funcionalidades podem não funcionar ao utilizá-los. Por exemplo, no `prettydoc` não é possível inserir abas como mostrado [aqui](#abas). É importante estar atentos ao repositório desses pacotes no GitHub para relatar e verificar a existência de problemas na utilização dos pacotes.
 
@@ -117,9 +118,8 @@ Veja exemplos de relatórios utilizando estes pacotes:
 [![](temp_img/clean.png)](https://cdn.rawgit.com/juba/rmdformats/master/resources/examples/html_clean/html_clean_sample.html)
 </div>
 
-<center>
 <div class="col2">
 [![](temp_img/docco.png)](https://cdn.rawgit.com/juba/rmdformats/master/resources/examples/html_docco/html_docco_sample.html)
+[![](temp_img/tufte.png)](https://rstudio.github.io/tufte/)
 </div>
-</center>
 
