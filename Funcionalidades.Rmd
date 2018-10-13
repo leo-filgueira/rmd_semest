@@ -44,7 +44,7 @@ Suponha que no índice só devam aparecer títulos de nível até
 
 ## Numeração de seções {-}
 
-Podemos numerar as seções facilmente, quando o outpt é um documento pdf ou html, adicionando `number_sections: true` no YAML. Com isso, todos as seções serão numeradas. Já ao escolher um documento de word como output, é necessário criar um arquivo de referência. Veja [este tutorial](word_referencia.html) para aprender a criar um arquivo de referência.
+Podemos numerar as seções facilmente, quando o outpt é um documento pdf ou html, adicionando `number_sections: true` no YAML. Com isso, todos as seções serão numeradas. Já ao escolher um documento de word como output, é necessário criar um arquivo de referência. Veja [este tutorial](Word/word_referencia.html) para aprender a criar um arquivo de referência.
 
 Para que uma seção específica não seja numerada, mesmo definindo `number_sections: true`, basta adicionar `{-}` ao lado do nome da seção:
 
