@@ -40,7 +40,7 @@ Segundo seu próprio criador:
 
 - Reproducibilidade. Este arquivo, por exemplo, pode ser reproduzido, desde que o computador possua o R com os pacotes devidamente instalados.
 
-- Variedade de formatos de *output*, sejam formatos estáticos ou dinâmicos, desde um documento de word até um HTML interativo.
+- Variedade de formatos de *output*, sejam formatos estáticos ou dinâmicos, desde um documento de word até um HTML.
 
 - Uso de algumas estruturas do $\LaTeX{}$.
 
