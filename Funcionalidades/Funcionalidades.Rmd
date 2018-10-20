@@ -62,7 +62,7 @@ output:
     toc: true
     number_sections: true
 ```
-![](opcoes_yaml.png)
+![](opcoes_yaml.PNG)
 
 
 
@@ -97,13 +97,13 @@ Caso estejamos com `number_sections: true` e não queiramos criar uma próxima s
 
 **Exemplo**:
 
-![](abas2.png)
+![](abas2.PNG)
 
 &nbsp;
 
 # Templates (html)
 
-Existem pacotes que fornecem templates para os relatórios em html diferentes do template básico, como é o caso deste relatório. Para isso basta instalar o pacote no R e, ao criar um novo R Markdown, clicamos em *From template* e selecionamos o template do pacote desejado. Citamos dois pacotes:
+Existem pacotes que fornecem templates para os relatórios em html diferentes do template básico, como é o caso deste relatório. Para isso basta instalar o pacote no R e, ao criar um novo R Markdown, clicamos em *From template* e selecionamos o template do pacote desejado. Citamos três pacotes:
 
 - [`prettydoc`](http://yixuan.cos.name/prettydoc/)
 - [`rmdformats`](https://github.com/juba/rmdformats)
@@ -114,28 +114,28 @@ Em geral esses pacotes permitem as mesmas formatações de qualquer relatório e
 Veja exemplos de relatórios utilizando estes pacotes:
 
 <div class="col2">
-[![](temp_img/architect.png)](http://yixuan.cos.name/prettydoc/architect.html)
-[![](temp_img/cayman.png)](http://yixuan.cos.name/prettydoc/cayman.html)
+[![](../temp_img/architect.png)](http://yixuan.cos.name/prettydoc/architect.html)
+[![](../temp_img/cayman.png)](http://yixuan.cos.name/prettydoc/cayman.html)
 </div>
 
 <div class="col2">
-[![](temp_img/hpstr.png)](http://yixuan.cos.name/prettydoc/hpstr.html)
-[![](temp_img/leonids.png)](http://yixuan.cos.name/prettydoc/leonids.html)
+[![](../temp_img/hpstr.png)](http://yixuan.cos.name/prettydoc/hpstr.html)
+[![](../temp_img/leonids.png)](http://yixuan.cos.name/prettydoc/leonids.html)
 </div>
 
 <div class="col2">
-[![](temp_img/tactile.png)](http://yixuan.cos.name/prettydoc/tactile.html)
-[![](temp_img/material.png)](https://cdn.rawgit.com/juba/rmdformats/master/resources/examples/material/material.html)
+[![](../temp_img/tactile.png)](http://yixuan.cos.name/prettydoc/tactile.html)
+[![](../temp_img/material.png)](https://cdn.rawgit.com/juba/rmdformats/master/resources/examples/material/material.html)
 </div>
 
 <div class="col2">
-[![](temp_img/readthedown.png)](https://cdn.rawgit.com/juba/rmdformats/master/resources/examples/readthedown/readthedown.html)
-[![](temp_img/clean.png)](https://cdn.rawgit.com/juba/rmdformats/master/resources/examples/html_clean/html_clean_sample.html)
+[![](../temp_img/readthedown.png)](https://cdn.rawgit.com/juba/rmdformats/master/resources/examples/readthedown/readthedown.html)
+[![](../temp_img/clean.png)](https://cdn.rawgit.com/juba/rmdformats/master/resources/examples/html_clean/html_clean_sample.html)
 </div>
 
 <div class="col2">
-[![](temp_img/docco.png)](https://cdn.rawgit.com/juba/rmdformats/master/resources/examples/html_docco/html_docco_sample.html)
-[![](temp_img/tufte.png)](https://rstudio.github.io/tufte/)
+[![](../temp_img/docco.png)](https://cdn.rawgit.com/juba/rmdformats/master/resources/examples/html_docco/html_docco_sample.html)
+[![](../temp_img/tufte.png)](https://rstudio.github.io/tufte/)
 </div>
 
 &nbsp;
@@ -144,16 +144,23 @@ Veja exemplos de relatórios utilizando estes pacotes:
 
 <center>
 
-**Considerações finais**
+**Notas de rodapé**
 
 </center>
 
+Basta inserir `[^1]`, `[^2]`, ... onde o link para a nota de rodapé deve ficar[^1]. Ao final do texto inserimos a nota, com:
+
+```
+[^1]: Nota de rodapé 1
+[^2]: Nota de rodapé 2
+``` 
+
+
+
+
 
 &nbsp;
 
 &nbsp;
 
-
-
-
-
+[^1]: Veja mais [aqui](https://duckduckgo.com/l/?kh=-1&uddg=https%3A%2F%2Fwww.rstudio.com%2Fwp-content%2Fuploads%2F2016%2F03%2Frmarkdown-cheatsheet-2.0.pdf)
