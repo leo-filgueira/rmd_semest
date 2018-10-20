@@ -144,7 +144,7 @@ Veja exemplos de relatórios utilizando estes pacotes:
 
 <center>
 
-**Notas de rodapé**
+# Notas de rodapé
 
 </center>
 
