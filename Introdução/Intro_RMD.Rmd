@@ -164,6 +164,7 @@ Resultando em:
     * Lista da sub lista do segundo item
 - Terceiro item da lista.
 
+**Observação:** Dependendo da versão dos pacotes e/ou pandoc, podem ser necessários 4 espaços (ou 2 *tabs*) para obter sub listas.
 
 #### Ordenadas
 
@@ -288,7 +289,7 @@ $$ f_X(x) = \frac{1}{\sqrt{2 \pi \sigma}} \exp \left \{\frac{-(x - \mu)^2}{2\sig
 
 ### Tabelas
 
-Usamos \| para separar colunas e \- para delimitar o cabeçalho da tabela:
+Usamos `|` para separar colunas e `-` para delimitar o cabeçalho da tabela:
 
 <center>
 ```
@@ -332,11 +333,11 @@ Para inserir um bloco de códigos, clique no botão "Insert" e selecione "R"
 
 Dessa maneira será inserido, onde o cursor estiver localizado, o seguinte:
 
+````
+```{r}`r ''`
 
-`r ''` ```{r}
-
-`r ''` ```
-
+```
+````
 
 Neste espaço podemos escrever códigos do R normalmente, como se estivéssemos em um script.
 
@@ -344,16 +345,16 @@ Neste espaço podemos escrever códigos do R normalmente, como se estivéssemos 
 
 Opção         | Resultado
 --------------| ---------------------------------------------------------- 
-`eval = FALSE` | mostra o chunk, mas não o executa;
-`echo = FALSE` | executa o chunk, mas não o mostra;
-`warning = FALSE` | não mostra mensagens de erros;
-`message = FALSE` | não mostra mensagens de carregamento de funções;
-`fig.align`, `fig.height`, `fig.width` | mexe no alinhamento, altura e largura da imagem/figura. Veja mais opções [aqui](https://sebastiansauer.github.io/figure_sizing_knitr/).
-`cache = TRUE` | armazena o output do chunk em pastas separadas. Evita que a geração do relatório demore. É recomendado nomear o chunk `{r nome_chunk}`
+`eval = FALSE` | mostra o chunk, mas não o executa
+`echo = FALSE` | executa o chunk, mas não o mostra
+`warning = FALSE` | não mostra warnings
+`message = FALSE` | não mostra mensagens
+`fig.align`, `fig.height`, `fig.width` | modifica alinhamento, altura e largura da imagem/figura. Veja mais opções [aqui](https://sebastiansauer.github.io/figure_sizing_knitr/)
+`cache = TRUE` | armazena o output do chunk em pastas separadas. Pode evitar demora na geração do relatório. É recomendado nomear o chunk (`{r nome_chunk}`)
 
 Exemplo:
 
-![](img/exemplo_chunk.png)
+![](img/exemplo_chunk.PNG)
 
 ```{r, echo = FALSE}
 library(datasets)
